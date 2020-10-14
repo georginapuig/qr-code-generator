@@ -1,0 +1,25 @@
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  border: outline;
+  background: #1EDD88;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #1BCB7F;
+  color: white;
+}
+
+input[type=text] {
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid rgb(184, 184, 184);
+  padding: 8px 30px;
+  transition: .3s
+}
+
+input[type=text]:focus {
+  border: 1px solid rgb(216, 214, 214);
+}
