@@ -1,0 +1,8 @@
+<form action="/home">
+  <input type="text" name="link" placeholder="Type a link">
+  <input type="submit">
+</form>
+
+<% if params[:link] %>
+  <%= @svg.html_safe %> 
+<%end%>
