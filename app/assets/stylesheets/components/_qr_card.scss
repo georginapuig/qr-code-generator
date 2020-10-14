@@ -18,3 +18,11 @@
 .qr-no-link {
   opacity: .1;
 }
+
+@media only screen and (max-width: 770px){
+  .card-product {
+    overflow: auto;
+    height: 100vh;
+    background: transparent;
+  }
+}

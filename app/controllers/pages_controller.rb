@@ -12,10 +12,4 @@ class PagesController < ApplicationController
       standalone: true
     )
   end
-
-  # private
-
-  # def link_params
-  #   params.require(:qrcode).permit(:link)
-  # end
 end

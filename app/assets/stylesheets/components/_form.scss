@@ -23,3 +23,17 @@ input[type=text] {
 input[type=text]:focus {
   border: 1px solid rgb(216, 214, 214);
 }
+
+@media only screen and (max-width: 770px){
+  .btn-flat {
+    margin-top: 10px;
+    width: 75%;
+    padding: 10px 24px;
+    font-size: 20px;
+  }
+
+  input[type=text] {
+    width: 75%;
+    padding: 10px 24px;
+  }
+}
