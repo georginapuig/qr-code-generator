@@ -1,4 +1,4 @@
-<div class="card-product col-md-6 pt-md-5 mt-5">
+<div class="card-product col-md-6 pt-md-5 mt-5 mb-5">
   <h1 class="pb-5">Create your QR Code</h1>
 
   <form action="/home" class="pb-5">
@@ -7,11 +7,11 @@
   </form>
 
   <% if params[:link] %>
-  <div class="pb-5">
+  <div class="pb-5 mb-4">
     <%= @svg.html_safe %>
   </div>
   <% else %>
-    <div class="qr-no-link pb-5">
+    <div class="qr-no-link">
       <%= @svg.html_safe %>
     </div>
   <% end %>
