@@ -8,7 +8,7 @@ class PagesController < ApplicationController
       offset: 0,
       color: '000',
       shape_rendering: 'crispEdges',
-      module_size: 8,
+      module_size: 6,
       standalone: true
     )
   end
