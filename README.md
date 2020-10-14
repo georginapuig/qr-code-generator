@@ -13,6 +13,7 @@ Project is created with:
 - Ruby 2.6.6
 - Rails 6.0.3
 - Webpack 4.0
+- rqrcode
 - CSS/SCSS
 - Bootstrap
 - Fontawesome
