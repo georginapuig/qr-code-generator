@@ -1,10 +1,19 @@
-<form action="/home">
-  <input type="text" name="link" placeholder="Type a link">
-  <input type="submit">
-</form>
+<div class="card-product col-md-6 pt-5 mt-5">
+  <h1 class="pb-4">Create your QR Code</h1>
 
-<% if params[:link] %>
-  <%= @svg.html_safe %> 
-<%end%>
+  <form action="/home" class="pb-5">
+    <input type="text" name="link" placeholder="Type a link">
+    <input type="submit" value="Submit">
+  </form>
 
-<%= link_to 'home', root_path %>
+  <% if params[:link] %>
+    <%= @svg.html_safe %> 
+  <% else %>
+    <div class="qr-no-link">
+      <%= @svg.html_safe %>
+    </div>
+  <% end %>
+</div>
+
+
+

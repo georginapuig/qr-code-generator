@@ -1,0 +1,20 @@
+.card-product {
+  overflow: hidden;
+  height: 65vh;
+  background: white;
+  box-shadow: 0 14px 16px rgba(0, 0, 0, .06);
+  border-radius: 6px;
+  text-align: center;
+  margin: auto;
+}
+
+.card-product h1 {
+  font-family: $body-font;
+  font-size: 35px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.qr-no-link {
+  opacity: .1;
+}
