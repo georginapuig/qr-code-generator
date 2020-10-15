@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   require 'rqrcode'
-  # (website controller)
+
   def qr
     @url = params[:url].to_s
     @qrcode = RQRCode::QRCode.new(@url)
