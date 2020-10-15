@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root to: 'pages#home'
+  root to: 'pages#qr'
 
-  get 'home', to: 'pages#home'
+  get 'websites/qr', to: 'pages#qr'
+  get 'websites/visit', to: 'pages#visit'
 end

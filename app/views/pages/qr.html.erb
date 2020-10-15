@@ -1,21 +1,18 @@
 <div class="card-product col-md-6 pt-md-5 mt-5 mb-5">
   <h1 class="pb-5">Create your QR Code</h1>
 
-  <form action="/home" class="pb-5">
-    <input type="text" name="link" placeholder="Type a link">
+  <form action="/websites/qr" class="pb-5">
+    <input type="text" name="url" placeholder="Type a link">
     <input class="btn btn-flat" type="submit" value="Submit">
   </form>
 
-  <% if params[:link] %>
-  <div class="pb-5 mb-4">
-    <%= @svg.html_safe %>
-  </div>
+  <% if params[:url] %>
+    <div class="pb-5 mb-4">
+      <%= @svg.html_safe %>
+    </div>
   <% else %>
     <div class="qr-no-link mb-5">
       <%= @svg.html_safe %>
     </div>
   <% end %>
 </div>
-
-
-
