@@ -20,8 +20,16 @@ Project is created with:
 - Work with `.erb` files
 	
 ## Setup
+Install all dependencies
 ```bash
 bundle install
+```
+
+Create db and migrate schema
+
+```bash
+rake db:create
+rake db:migrate
 ```
 
 To start (usually on port `3000`):
