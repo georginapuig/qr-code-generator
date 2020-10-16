@@ -3,7 +3,8 @@ class PagesController < ApplicationController
 
   def qr
     @url = params[:url].to_s
-    @qrcode = RQRCode::QRCode.new(@url)
+    @linkUrl = 'https://rails-qr-code-generate.herokuapp.com/websites/visit' + @url
+    @qrcode = RQRCode::QRCode.new(@linkUrl)
     
     if params[:url].present?
       @svg = @qrcode.as_svg(
@@ -22,7 +23,8 @@ class PagesController < ApplicationController
 
   def visit
     @url = params[:url].to_s
-    @website = Website.find_by(url: @url)
+    @linkUrl = 'https://rails-qr-code-generate.herokuapp.com/websites/visit' + @url
+    @website = Website.find_by(url: @linkUrl)
 
     if @website
       @website.visits += 1
