@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def qr
     # https://rails-qr-code-generate.herokuapp.com/websites/visit?url= + https://www.google.com
-    @url = ENV['URL'] + url_params.to_s
+    @url = ENV['URL'] + url_params[:url].to_s
     @qrcode = RQRCode::QRCode.new(@url)
 
     if url_params.present?
@@ -22,7 +22,7 @@ class PagesController < ApplicationController
   end
 
   def visit
-    @url = url_params.to_s
+    @url = url_params[:url].to_s
     @website = Website.find_by(url: @url)
 
     if @website
