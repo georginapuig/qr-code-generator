@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def qr
     # https://rails-qr-code-generate.herokuapp.com/websites/visit?url= + https://www.google.com
-    @url = ENV['URL'] + params[:url].to_s.valid?
+    @url = ENV['URL'] + params[:url].to_s
     @qrcode = RQRCode::QRCode.new(@url)
 
     if params[:url].present?
