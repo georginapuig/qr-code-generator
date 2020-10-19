@@ -3,10 +3,10 @@ class PagesController < ApplicationController
 
   def qr
     # https://rails-qr-code-generate.herokuapp.com/websites/visit?url= + https://www.google.com
-    @url = ENV['URL'] + params[:url].to_s
+    @url = ENV['URL'] + url_params.to_s
     @qrcode = RQRCode::QRCode.new(@url)
 
-    if params[:url].present?
+    if url_params.present?
       @svg = @qrcode.as_svg(
         offset: 0,
         color: '000',
@@ -16,13 +16,13 @@ class PagesController < ApplicationController
       )
     else
       @svg = @qrcode.as_svg(
-        module_size: 7
+        module_size: 5
       )
     end
   end
 
   def visit
-    @url = params[:url].to_s
+    @url = url_params.to_s
     @website = Website.find_by(url: @url)
 
     if @website
@@ -34,5 +34,11 @@ class PagesController < ApplicationController
     end
 
     redirect_to @url
+  end
+
+  private
+
+  def url_params
+    params.permit(:url)
   end
 end
