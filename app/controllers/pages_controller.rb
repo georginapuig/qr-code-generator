@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   require 'rqrcode'
 
   def qr
-    @url = "https://rails-qr-code-generate.herokuapp.com/websites/visit?url=" + params[:url].to_s
+    @url = "https://rails-qr-code-generate.herokuapp.com/websites/visit?url=https%3A%2F%2F" + params[:url].to_s
     @qrcode = RQRCode::QRCode.new(@url)
 
     if params[:url].present?
