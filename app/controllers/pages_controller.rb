@@ -21,7 +21,7 @@ class PagesController < ApplicationController
   end
 
   def visit
-    @url = "https://rails-qr-code-generate.herokuapp.com/websites/visit?url=" + params[:url].to_s
+    @url = "https://rails-qr-code-generate.herokuapp.com/websites/visit?url=https%3A%2F%2F" + params[:url].to_s
     @website = Website.find_by(url: @url)
 
     if @website
