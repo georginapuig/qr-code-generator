@@ -3,7 +3,8 @@ class PagesController < ApplicationController
 
   def qr
     # localhost:3000/websites/visit?url=https%3A%2F%2Fwww.google.com
-    @url = ENV=['URL'] + params[:url].to_s
+    @url_var = ENV=['URL']
+    @url = @url_var + params[:url].to_s
     @qrcode = RQRCode::QRCode.new(@url)
 
     if params[:url].present?
