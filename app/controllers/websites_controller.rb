@@ -1,4 +1,4 @@
-class PagesController < ApplicationController
+class WebsitesController < ApplicationController
   require 'rqrcode'
 
   def qr
