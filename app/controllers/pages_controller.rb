@@ -28,9 +28,6 @@ class PagesController < ApplicationController
     if @website
       @website.visits += 1
       @website.save
-    else
-      @website = Website.new(url: @url, visits: 1)
-      @website.save
     end
 
     redirect_to @url
