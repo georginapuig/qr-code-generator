@@ -21,8 +21,4 @@ RSpec.describe "Websites", type: :request do
       expect(response).to redirect_to(assigns(:url)) 
     end
   end
-
-  context 'scope tests' do
-
-  end
 end

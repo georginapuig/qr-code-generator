@@ -51,10 +51,5 @@ RSpec.describe Website, type: :model do
       website = Website.new(url: 'example', visits: 0)
       expect(website.valid?).to eq(false)
     end
-
-  end
-
-  context 'scope tests' do
-
   end
 end
