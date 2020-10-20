@@ -13,11 +13,15 @@ Project is created with:
 - Ruby 2.6.6
 - Rails 6.0.3
 - Webpack 4.0
+- PostgreSQL
+- Regexp
 - rqrcode
 - CSS/SCSS
 - Bootstrap
 - Fontawesome
 - Work with `.erb` files
+- dotenv
+- RSpec
 	
 ## Setup
 Install all dependencies
