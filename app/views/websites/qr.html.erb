@@ -7,12 +7,12 @@
   </form>
 
   <% if @website.save %>
-    <div class="pb-5 mb-4">
+    <div class="pb-4 mb-4">
       <%= @svg.html_safe %>
     </div>
   <% else %>
-    <div class="qr-no-link mb-5">
-      <h4>example https://www.google.com</h4>
+    <div class="qr-no-link mb-4">
+      <h2>example https://www.google.com</h2>
     </div>
   <% end %>
 </div>

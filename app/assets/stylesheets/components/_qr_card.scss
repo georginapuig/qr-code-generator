@@ -14,15 +14,21 @@
   margin: 0;
 }
 
-.qr-no-link {
-  opacity: .1;
+.qr-no-link h2 {
+  font-size: 1.4rem;
+  opacity: .2;
 }
 
 @media only screen and (max-width: 770px){
   .card-product {
+    padding: 22px;
     overflow: auto;
     height: 100vh;
     background: transparent;
     box-shadow: none;
+  }
+
+  .card-product h1 {
+    font-size: 30px;
   }
 }
