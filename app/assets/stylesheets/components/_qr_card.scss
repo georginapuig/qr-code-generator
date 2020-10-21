@@ -21,7 +21,19 @@
 
 @media only screen and (max-width: 770px){
   .card-product {
-    padding: 22px;
+    padding: 0px 40px;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .card-product h1 {
+    font-size: 37px;
+  }
+}
+
+@media only screen and (max-width: 540px){
+  .card-product {
+    padding: 10px 50px;
     overflow: auto;
     height: 100vh;
     background: transparent;
@@ -30,5 +42,9 @@
 
   .card-product h1 {
     font-size: 30px;
+  }
+
+  .qr-no-link h2 {
+    font-size: 1.3rem;
   }
 }

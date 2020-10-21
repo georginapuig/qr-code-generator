@@ -27,13 +27,26 @@ input[type=text]:focus {
 @media only screen and (max-width: 770px){
   .btn-flat {
     margin-top: 10px;
-    width: 75%;
+    font-size: 20px;
+  }
+
+  input[type=text],
+  .btn-flat {
+    width: 100%;
+    padding: 10px 30px;
+  }
+}
+
+@media only screen and (max-width: 540px){
+  .btn-flat {
+    margin-top: 10px;
+    width: 100%;
     padding: 10px 24px;
     font-size: 20px;
   }
 
   input[type=text] {
-    width: 75%;
+    width: 100%;
     padding: 10px 24px;
   }
 }
