@@ -18,6 +18,7 @@ Project is created with:
 - rqrcode
 - CSS/SCSS
 - Bootstrap
+- Media Queries
 - Fontawesome
 - Work with `.erb` files
 - dotenv
@@ -41,5 +42,3 @@ To start (usually on port `3000`):
 ```bash
 rails s
 ```
-
-
