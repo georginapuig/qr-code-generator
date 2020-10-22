@@ -1,21 +1,20 @@
 class WebsitesController < ApplicationController
   require 'rqrcode'
 
+  before_action :find_by_url, only: [:qr, :visit]
+
   def qr
-    @url = url_params[:url].to_s
-    @website = Website.find_by(url: @url)
-    
-    if @website.nil?
+    if find_by_url.nil?
+      # if url is valid
       @website = Website.create(url: url_params[:url], visits: 0)
     end
     
-    # if url is valid
     if @website
       # @url = https://rails-qr-code-generate.herokuapp.com/websites/visit?url= + https://www.google.com
       @url = ENV['URL'] + @website[:url].to_s
       # create qr code
       @qrcode = RQRCode::QRCode.new(@url)
-
+      # display svg
       @svg = @qrcode.as_svg(
         offset: 0,
         color: '000',
@@ -27,10 +26,7 @@ class WebsitesController < ApplicationController
   end
 
   def visit
-    @url = url_params[:url].to_s
-    @website = Website.find_by(url: @url)
-
-    if @website
+    if find_by_url
       @website.visits += 1
       @website.save
     end
@@ -39,6 +35,10 @@ class WebsitesController < ApplicationController
   end
 
   private
+
+  def find_by_url
+    @website = Website.find_by(url: url_params[:url].to_s)
+  end
 
   def url_params
     params.permit(:url)
