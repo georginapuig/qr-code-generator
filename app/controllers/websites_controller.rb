@@ -2,7 +2,12 @@ class WebsitesController < ApplicationController
   require 'rqrcode'
 
   def qr
-    @website = Website.create(url: url_params[:url], visits: 0)
+    if @website.nil?
+      @website = Website.create(url: url_params[:url], visits: 0)
+    else
+      @url = url_params[:url].to_s
+      @website = Website.find_by(url: @url)
+    end
     
     # if url is valid
     if @website.save
