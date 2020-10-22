@@ -30,6 +30,9 @@ class WebsitesController < ApplicationController
       @website.save
     end
 
+    # count visits per url
+    # Website.group(:url).sum(:visits)
+
     redirect_to @url
   end
 
