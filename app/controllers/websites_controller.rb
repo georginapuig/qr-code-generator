@@ -2,8 +2,13 @@ class WebsitesController < ApplicationController
   require 'rqrcode'
 
   def qr
-    @website = Website.create(url: url_params[:url], visits: 0)
-    
+    @url = url_params[:url].to_s
+    @website = Website.find_by(url: @url)
+
+    if @website.nil?
+      @website = Website.create(url: url_params[:url], visits: 0)
+    end
+
     # if url is valid
     if @website.save
       # @url = https://rails-qr-code-generate.herokuapp.com/websites/visit?url= + https://www.google.com
